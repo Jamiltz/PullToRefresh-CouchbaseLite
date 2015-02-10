@@ -1,0 +1,21 @@
+{
+  "log": ["REST+"],
+  "databases": {
+    "cookbook": {
+      "server": "walrus:",
+      "users": {
+        "GUEST": {
+          "disabled": false,
+          "admin_channels": ["public_recipes"]
+        }
+      },
+      "sync": `
+        function(doc, oldDoc) {
+          if (doc.type == 'recipe') {
+            channel('public_recipes');
+          }
+        }
+      `
+    }
+  }
+}

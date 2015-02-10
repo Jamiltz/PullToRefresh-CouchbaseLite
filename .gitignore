@@ -1,0 +1,24 @@
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+.xcuserstate
+profile
+*.moved-aside
+DerivedData
+.idea/
+Pods
+.pt
+.build
+tmtags
+tmtagsHistory
+config/releasenotes.txt
+.bundle
+*.xcuserstate
+PullToRefresh+CouchbaseLite.xcworkspace/xcuserdata/*
+Podfile.local
+*.ipa
