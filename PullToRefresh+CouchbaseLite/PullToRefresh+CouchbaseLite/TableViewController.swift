@@ -68,9 +68,11 @@ class TableViewController: UITableViewController {
     }
     
     func replicationChanged(notification: NSNotification) {
-        
+
         if pull.status == CBLReplicationStatus.Stopped {
             runQuery()
+            refreshControl?.endRefreshing()
+        } else if(pull.status == CBLReplicationStatus.Offline) {
             refreshControl?.endRefreshing()
         }
         
